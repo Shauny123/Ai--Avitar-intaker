@@ -1,0 +1,339 @@
+# requirements.txt
+# Complete Python dependencies for Legal AI Intake System
+# Based on PodGPT with advanced voice processing and lip sync
+
+# ===================================================================
+# CORE FRAMEWORK & API
+# ===================================================================
+
+# FastAPI and ASGI server
+fastapi>=0.104.1
+uvicorn[standard]>=0.24.0
+websockets>=12.0
+
+# HTTP client and utilities
+httpx>=0.25.0
+requests>=2.31.0
+aiohttp>=3.9.0
+
+# Data validation and serialization
+pydantic>=2.5.0
+python-multipart>=0.0.6
+
+# Authentication and security
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+python-dotenv>=1.0.0
+
+# ===================================================================
+# DATABASE & CACHING
+# ===================================================================
+
+# PostgreSQL database
+psycopg2-binary>=2.9.9
+sqlalchemy>=2.0.23
+alembic>=1.12.1
+
+# Redis for caching and session management
+redis>=5.0.1
+hiredis>=2.2.3
+
+# Database connection pooling
+asyncpg>=0.29.0
+
+# ===================================================================
+# AI & MACHINE LEARNING CORE
+# ===================================================================
+
+# PyTorch ecosystem (CPU version by default)
+torch>=2.1.0,<2.3.0
+torchaudio>=2.1.0,<2.3.0
+torchvision>=0.16.0,<0.18.0
+
+# Transformers and language models
+transformers>=4.35.0
+tokenizers>=0.14.0
+accelerate>=0.24.0
+
+# Sentence transformers for embeddings
+sentence-transformers>=2.2.2
+
+# HuggingFace ecosystem
+datasets>=2.14.0
+huggingface-hub>=0.19.0
+
+# ===================================================================
+# AUDIO PROCESSING & SPEECH
+# ===================================================================
+
+# OpenAI Whisper for speech recognition
+openai-whisper>=20231117
+whisper>=1.1.10
+
+# Audio processing libraries
+librosa>=0.10.1
+soundfile>=0.12.1
+pydub>=0.25.1
+pyaudio>=0.2.14
+
+# Audio format support
+ffmpeg-python>=0.2.0
+
+# Speech analysis
+speechrecognition>=3.10.0
+pyannote.audio>=3.1.1
+
+# ===================================================================
+# NATURAL LANGUAGE PROCESSING
+# ===================================================================
+
+# spaCy for NLP
+spacy>=3.7.2
+
+# NLTK for text processing
+nltk>=3.8.1
+
+# Text preprocessing
+unidecode>=1.3.7
+ftfy>=6.1.1
+
+# ===================================================================
+# VECTOR SEARCH & EMBEDDINGS
+# ===================================================================
+
+# FAISS for vector similarity search (CPU version)
+faiss-cpu>=1.7.4
+
+# Alternative vector databases
+chromadb>=0.4.17
+pinecone-client>=2.2.4
+
+# ===================================================================
+# PODGPT INTEGRATION DEPENDENCIES
+# ===================================================================
+
+# LangChain for RAG pipeline (PodGPT compatibility)
+langchain>=0.0.340
+langchain-community>=0.0.1
+langchain-core>=0.1.0
+
+# Document processing for RAG
+pypdf2>=3.0.1
+python-docx>=1.1.0
+openpyxl>=3.1.2
+
+# Text splitting and chunking
+tiktoken>=0.5.1
+
+# ===================================================================
+# LEGAL-SPECIFIC LIBRARIES
+# ===================================================================
+
+# Legal document processing
+legal-nlp>=0.1.0
+law-ai>=0.2.0
+
+# Date and time parsing for legal documents
+dateparser>=1.2.0
+python-dateutil>=2.8.2
+
+# Document analysis
+textstat>=0.7.3
+readability>=0.3.1
+
+# ===================================================================
+# EXTERNAL API INTEGRATIONS
+# ===================================================================
+
+# OpenAI API client
+openai>=1.3.0
+
+# Google Cloud services (for translation)
+google-cloud-translate>=3.12.1
+google-cloud-speech>=2.21.0
+
+# Azure Cognitive Services
+azure-cognitiveservices-speech>=1.34.0
+
+# ===================================================================
+# MONITORING & OBSERVABILITY
+# ===================================================================
+
+# Prometheus metrics
+prometheus-client>=0.19.0
+
+# Structured logging
+structlog>=23.2.0
+
+# Application performance monitoring
+elastic-apm>=6.20.0
+
+# Health checks
+health-check>=1.3.3
+
+# ===================================================================
+# DATA PROCESSING & UTILITIES
+# ===================================================================
+
+# Scientific computing
+numpy>=1.24.0,<2.0.0
+pandas>=2.1.0
+scipy>=1.11.0
+
+# JSON processing
+ujson>=5.8.0
+orjson>=3.9.0
+
+# Image processing (for avatar generation)
+pillow>=10.1.0
+opencv-python>=4.8.0
+
+# ===================================================================
+# DEVELOPMENT & TESTING
+# ===================================================================
+
+# Testing framework
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+httpx-mock>=0.7.0
+
+# Code formatting and linting
+black>=23.11.0
+isort>=5.12.0
+flake8>=6.1.0
+mypy>=1.7.0
+
+# Pre-commit hooks
+pre-commit>=3.6.0
+
+# ===================================================================
+# ASYNC & CONCURRENCY
+# ===================================================================
+
+# Async utilities
+asyncio>=3.4.3
+aiofiles>=23.2.1
+anyio>=4.1.0
+
+# Background task processing
+celery>=5.3.4
+redis>=5.0.1
+
+# ===================================================================
+# ADDITIONAL UTILITIES
+# ===================================================================
+
+# Progress bars
+tqdm>=4.66.0
+
+# Configuration management
+pyyaml>=6.0.1
+configparser>=6.0.0
+
+# Timezone handling
+pytz>=2023.3
+
+# UUID generation
+uuid>=1.30
+
+# Regular expressions
+regex>=2023.10.3
+
+# ===================================================================
+# PRODUCTION DEPLOYMENT
+# ===================================================================
+
+# WSGI/ASGI servers for production
+gunicorn>=21.2.0
+uvloop>=0.19.0
+
+# Process management
+supervisor>=4.2.5
+
+# Environment management
+python-decouple>=3.8
+
+# ===================================================================
+# OPTIONAL GPU SUPPORT
+# ===================================================================
+
+# Uncomment these lines for GPU support
+# torch>=2.1.0+cu118 -f https://download.pytorch.org/whl/cu118/torch_stable.html
+# torchaudio>=2.1.0+cu118 -f https://download.pytorch.org/whl/cu118/torch_stable.html
+# faiss-gpu>=1.7.4
+
+# NVIDIA RAPIDS for GPU acceleration
+# cudf>=23.10.0
+# cuml>=23.10.0
+
+# ===================================================================
+# LEGAL COMPLIANCE & SECURITY
+# ===================================================================
+
+# Encryption and security
+cryptography>=41.0.7
+bcrypt>=4.1.2
+
+# Legal document compliance
+python-docx>=0.8.11
+reportlab>=4.0.7
+
+# Data privacy utilities
+hashlib>=20081119
+hmac>=20101005
+
+# ===================================================================
+# LANGUAGE SUPPORT
+# ===================================================================
+
+# Multilingual text processing
+polyglot>=16.7.4
+langdetect>=1.0.9
+
+# Translation services
+googletrans>=4.0.0
+translate>=3.6.1
+
+# Text normalization
+unicodedata>=3.2
+
+# ===================================================================
+# SPECIALIZED LEGAL AI MODELS
+# ===================================================================
+
+# Legal BERT and specialized models (install via pip install -e)
+# legal-bert>=1.0.0
+# lexnlp>=2.3.0
+
+# Legal entity recognition
+# spacy-legal>=1.0.0
+
+# ===================================================================
+# DEVELOPMENT NOTES
+# ===================================================================
+
+# Version constraints explanation:
+# - torch: Limited to <2.3.0 for stability with current transformers
+# - numpy: Limited to <2.0.0 for compatibility with scientific stack
+# - Specific versions for critical dependencies to ensure compatibility
+
+# Installation order for best compatibility:
+# 1. pip install --upgrade pip setuptools wheel
+# 2. pip install torch torchaudio torchvision
+# 3. pip install -r requirements.txt
+
+# For production deployment:
+# - Use pip-tools to generate requirements-lock.txt
+# - Consider using conda for complex dependencies
+# - Test all combinations before deployment
+
+# Memory requirements:
+# - Minimum: 8GB RAM for basic functionality
+# - Recommended: 16GB RAM for optimal performance  
+# - With GPU: Additional 6GB+ VRAM for models
+
+# Disk space requirements:
+# - Base installation: ~5GB
+# - With all models: ~15GB
+# - With legal datasets: ~50GB
